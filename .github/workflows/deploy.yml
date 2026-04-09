@@ -1,11 +1,11 @@
-name: Call Firebase Deploy
+name: Deploy Firebase Functions
 
 on:
   workflow_dispatch:
 
 jobs:
   deploy:
-    uses: ./.github/workflows/firebaseFunctionDeploy.yml
+    uses: TechArtists/backend-firebase-function-save-payload/.github/workflows/firebaseFunctionDeploy.yml@main
     with:
       function-name: savePayload
       projects: "fitnessai-api,allstays-appex,dietbet-staging,stepbet-staging-99260,dietbet-5771b,stepbet-1210"
